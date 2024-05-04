@@ -1,0 +1,14 @@
+word1 = 'компьютер'
+word2 = 'компьютера'
+word3 = 'компьютеров'
+pc =''
+
+while pc != '0':
+    pc = (input('Введите количество компьютеров: '))
+
+    if pc[-1:] == '1' and pc[-2:] != '11':
+        print (pc, word1)
+    elif pc[-1:] in ['2', '3' , '4'] and pc[-2:]not in ['12', '13', '14']:
+        print (pc, word2)
+    else:
+        print (pc, word3)
