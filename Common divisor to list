@@ -1,0 +1,23 @@
+print('Вычислятор общих делителей v 1.0')
+print('Эта программа найдёт общие делители для введёных Вами чисел')
+
+user = [] # Создаём пустой список
+user_value = input("Введите первое число: ")
+while user_value != 'done':
+    user_value = int(user_value)
+    user.append(user_value)
+    print ('Вы ввели: ', user)
+    user_value = input('Введите следующее число или напишите done, если чисел достаточно: ')
+print ('Отлично! Теперь найдём общие делители.')
+result = []
+
+for i in range(1, min(user)+1):
+    is_common_divisor = True
+    for num in user:
+        if num % i != 0:
+            is_common_divisor = False
+            break
+    if is_common_divisor:
+        result.append(i)
+
+print(result)
