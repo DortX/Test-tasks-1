@@ -1,0 +1,20 @@
+print('Поисковик простых чисел в заданном диапазоне v 1.0')
+x = int(input('Введите меньшее число: '))
+y = int(input('Введите большее число: '))
+result = []
+
+if x < 2:
+    x = 2
+if y < 2:
+    y = 2
+
+for i in range(x, y + 1):
+    is_prime = True
+    for j in range(2, int(i ** 0.5) + 1):
+        if i % j == 0:
+            is_prime = False
+            break
+    if is_prime and i != 1:
+        result.append(i)
+
+print(result)
