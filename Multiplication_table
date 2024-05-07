@@ -1,0 +1,14 @@
+print ('Таблица умножения v 1.0')
+x = int(input('Введите цифру от 1 до 9: '))
+x = x + 1
+
+table = [[0 for i in range(x)] for i in range(x)]
+
+for i in range(x - 1):
+    for j in range(x):
+        table[i][j] = j * (i + 1)
+       
+for z in table:
+    for number in z:
+        print('{:2}'.format(number), end=' ')
+    print()
